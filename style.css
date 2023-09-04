@@ -80,6 +80,7 @@ main {
 @media screen and (min-width: 800px) {
   .grid {
     display: grid;
+    column-gap: 2rem;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
     grid-template-areas:
@@ -89,7 +90,7 @@ main {
   }
   .cyan {
     grid-area: a;
-    transform: translateY(-120px);
+    transform: translateY(-100px);
     overflow: hidden;
   }
   .red {
@@ -102,7 +103,7 @@ main {
   }
   .blue {
     grid-area: d;
-    transform: translateY(-120px);
+    transform: translateY(-100px);
     overflow: hidden;
   }
   .starter {
