@@ -97,7 +97,7 @@ main {
   }
   .yellow {
     grid-area: c;
-    transform: translateY(-220px);
+    transform: translateY(-200px);
     overflow: hidden;
   }
   .blue {
