@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+:root {
+  --Red: hsl(0, 78%, 62%);
+  --Cyan: hsl(180, 62%, 55%);
+  --Orange: hsl(34, 97%, 64%);
+  --Blue: hsl(212, 86%, 64%);
+
+  --Very-Dark-Blue: hsl(234, 12%, 34%);
+  --Grayish-Blue: hsl(229, 6%, 66%);
+  --Very-Light-Gray: hsl(0, 0%, 98%);
+
+  --Font-size: 15px;
+}
+body {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+}
+main {
+  background-color: var(--Very-Light-Grayish-Blue);
+  color: var(--Grayish-Blue);
+  margin: 2em;
+}
+.starter {
+  width: 20em;
+  font-weight: 200;
+  font-size: var(--Font-size);
+  text-align: center;
+  margin: 0 auto 3rem;
+  & h1 {
+    font-size: 1.3rem;
+    font-weight: 200;
+  }
+  & h3 {
+    font-size: 1.3rem;
+    color: var(--Very-Dark-Blue);
+    margin-bottom: 0.5em;
+  }
+}
+.card {
+  width: 20em;
+  background-color: white;
+  padding: 1em;
+  font-size: var(--Font-size);
+  box-shadow: 0 0 5px 1px rgba(0 0 0 / 0.5);
+  border-radius: 10px;
+  & h3 {
+    color: var(--Very-Dark-Blue);
+    margin-bottom: 0.5em;
+  }
+  & img {
+    margin: 1em auto 0.5em;
+    float: right;
+  }
+}
+.cyan {
+  border-top: 0.3em solid var(--Cyan);
+}
+.blue {
+  border-top: 0.3em solid var(--Blue);
+}
+.yellow {
+  border-top: 0.3em solid var(--Orange);
+}
+.red {
+  border-top: 0.3em solid var(--Red);
+}
+
+.grid {
+  display: grid;
+  gap: 1em;
+}
+
+@media screen and (min-width: 800px) {
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas:
+      ". b ."
+      "a . d"
+      ". c .";
+  }
+  .cyan {
+    grid-area: a;
+    transform: translateY(-120px);
+    overflow: hidden;
+  }
+  .red {
+    grid-area: b;
+  }
+  .yellow {
+    grid-area: c;
+    transform: translateY(-220px);
+    overflow: hidden;
+  }
+  .blue {
+    grid-area: d;
+    transform: translateY(-120px);
+    overflow: hidden;
+  }
+  .starter {
+    width: 30em;
+  }
+}
